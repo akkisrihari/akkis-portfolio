@@ -1,0 +1,1469 @@
+.projects {
+  position: relative;
+  min-height: 100vh;
+  background: #03070a;
+  color: #f4f1eb;
+  overflow: hidden;
+}
+
+.projects-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 32px 32px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.projects-header {
+  position: relative;
+  z-index: 2;
+
+  min-height: 300px;
+
+  padding: 70px 7vw 80px;
+
+  display: grid;
+
+  grid-template-columns:
+    110px
+    minmax(500px, 1fr)
+    280px;
+
+  gap: 60px;
+
+  align-items: start;
+}
+
+.projects-index {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #ff542f;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.2em;
+}
+
+.projects-index i {
+  width: 20px;
+  height: 1px;
+
+  background: #ff542f;
+}
+
+.projects-index small {
+  writing-mode: vertical-rl;
+
+  color: #596067;
+
+  letter-spacing: 0.18em;
+}
+
+.projects-title p {
+  margin: 0 0 6px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.2em;
+
+  color: #ff542f;
+}
+
+.projects-title h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(72px, 8vw, 125px);
+
+  line-height: 0.82;
+
+  font-weight: 400;
+
+  letter-spacing: -0.055em;
+}
+
+.projects-title h1 em {
+  color: #ff542f;
+  font-style: normal;
+}
+
+.projects-intro {
+  padding-top: 4px;
+}
+
+.projects-intro p {
+  margin: 0 0 28px;
+
+  max-width: 270px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+
+  color: #f0eee9;
+}
+
+.projects-intro span {
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.2em;
+
+  color: #ff542f;
+}
+
+
+/* =========================================================
+   WORLD
+========================================================= */
+
+.projects-world {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   PROJECT ITEM
+========================================================= */
+
+.project-item {
+  position: relative;
+
+  min-height: 610px;
+
+  margin:
+    0 3.5vw
+    45px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.14);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(500px, 44%)
+    minmax(420px, 1fr);
+
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.project-number {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  z-index: 10;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.2em;
+
+  color: #ff542f;
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.project-visual {
+  position: relative;
+
+  height: 100%;
+  min-height: 610px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transform:
+    translateY(var(--parallax-y, 0px));
+
+  transition:
+    transform 0.15s linear;
+}
+
+
+/* =========================================================
+   VISUAL GRID
+========================================================= */
+
+.visual-grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 28px 28px;
+
+  mask-image:
+    radial-gradient(
+      circle,
+      black 20%,
+      transparent 75%
+    );
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.visual-orbit {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  pointer-events: none;
+}
+
+.visual-orbit-one {
+  width: 330px;
+  height: 330px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.16);
+
+  animation:
+    orbitPulse
+    6s
+    ease-in-out
+    infinite;
+}
+
+.visual-orbit-two {
+  width: 450px;
+  height: 450px;
+
+  border:
+    1px dashed
+    rgba(255,255,255,0.09);
+
+  animation:
+    orbitRotate
+    30s
+    linear
+    infinite;
+}
+
+.visual-orbit-three {
+  width: 530px;
+  height: 530px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.035);
+
+  animation:
+    orbitRotateReverse
+    45s
+    linear
+    infinite;
+}
+
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.visual-particle {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #dce7e8;
+
+  box-shadow:
+    0 0 12px
+    rgba(255,255,255,0.55);
+
+  animation:
+    particleFloat
+    5s
+    ease-in-out
+    infinite;
+}
+
+.particle-one {
+  left: 20%;
+  top: 27%;
+}
+
+.particle-two {
+  left: 76%;
+  top: 36%;
+
+  animation-delay: -1.5s;
+}
+
+.particle-three {
+  left: 30%;
+  top: 72%;
+
+  animation-delay: -3s;
+}
+
+.particle-four {
+  left: 78%;
+  top: 73%;
+
+  animation-delay: -2.3s;
+}
+
+
+/* =========================================================
+   COMMON OBJECT
+========================================================= */
+
+.project-object {
+  position: relative;
+
+  z-index: 5;
+
+  width: clamp(320px, 29vw, 455px);
+  height: clamp(320px, 29vw, 455px);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.project-object-glow {
+  position: absolute;
+
+  width: 85%;
+  height: 85%;
+
+  border-radius: 50%;
+
+  filter: blur(45px);
+
+  opacity: 0.3;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   VAYU
+========================================================= */
+
+.vayu-object {
+  animation:
+    vayuFloat
+    5.8s
+    cubic-bezier(0.45,0,0.55,1)
+    infinite;
+}
+
+.vayu-object .circular-logo {
+  position: relative;
+
+  width: 86%;
+  height: 86%;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(255,105,50,0.28);
+
+  box-shadow:
+    0 0 55px
+    rgba(255,85,40,0.14),
+    inset 0 0 40px
+    rgba(255,85,40,0.04);
+}
+
+.vayu-object .project-logo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  filter:
+    drop-shadow(
+      0 0 28px
+      rgba(255,100,45,0.32)
+    );
+}
+
+.vayu-object .project-object-glow {
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,91,45,0.45),
+      transparent 68%
+    );
+
+  animation:
+    vayuGlow
+    4s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
+   SVASTHYA
+   KEEPING THE TREATMENT
+========================================================= */
+
+.svasthya-object {
+  animation:
+    svasthyaFloat
+    4.8s
+    cubic-bezier(0.45,0,0.55,1)
+    infinite;
+}
+
+.svasthya-logo-wrap {
+  width: 76%;
+  height: 76%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.svasthya-object .project-logo {
+  width: 82%;
+  height: 82%;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 0 28px
+      rgba(61,205,220,0.4)
+    );
+
+  animation:
+    svasthyaBreath
+    4s
+    ease-in-out
+    infinite;
+}
+
+.svasthya-object .project-object-glow {
+  width: 70%;
+  height: 70%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(61,205,220,0.42),
+      transparent 68%
+    );
+
+  animation:
+    svasthyaGlow
+    3.8s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
+   AJ
+   STATIC SPACE + ONLY CENTRAL CORE ROTATES
+========================================================= */
+
+.aj-object {
+  animation:
+    ajFloat
+    6s
+    ease-in-out
+    infinite;
+}
+
+.aj-space {
+  position: relative;
+
+  width: 86%;
+  height: 86%;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(120,105,255,0.3);
+
+  box-shadow:
+    0 0 55px
+    rgba(110,90,255,0.17),
+    inset 0 0 50px
+    rgba(110,90,255,0.08);
+}
+
+
+/* STATIC SPACE */
+
+.aj-space-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transform: none;
+
+  filter:
+    drop-shadow(
+      0 0 25px
+      rgba(100,90,255,0.2)
+    );
+}
+
+
+/*
+   ONLY THIS LAYER ROTATES.
+
+   The circle is positioned over the centre
+   of the original AJ artwork.
+*/
+
+.aj-core {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 44%;
+  height: 44%;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  mix-blend-mode: screen;
+}
+
+.aj-core-image {
+  position: absolute;
+
+  width: 227%;
+  height: 227%;
+
+  max-width: none;
+
+  left: 50%;
+  top: 50%;
+
+  object-fit: cover;
+
+  transform:
+    translate(-50%, -50%);
+
+  animation:
+    ajCoreRotate
+    18s
+    linear
+    infinite;
+
+  filter:
+    drop-shadow(
+      0 0 22px
+      rgba(110,100,255,0.65)
+    );
+}
+
+.aj-object .project-object-glow {
+  width: 78%;
+  height: 78%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(112,92,255,0.55),
+      transparent 67%
+    );
+
+  animation:
+    ajGlow
+    3.5s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
+   FARMER AI
+========================================================= */
+
+.farmer-object {
+  animation:
+    farmerFloat
+    6.5s
+    cubic-bezier(0.45,0,0.55,1)
+    infinite;
+}
+
+.farmer-object .circular-logo {
+  position: relative;
+
+  width: 86%;
+  height: 86%;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(35,215,125,0.25);
+
+  background: transparent;
+
+  box-shadow:
+    0 0 55px
+    rgba(35,215,125,0.13),
+    inset 0 0 45px
+    rgba(35,215,125,0.04);
+}
+
+.farmer-object .project-logo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  filter:
+    drop-shadow(
+      0 0 28px
+      rgba(35,215,125,0.36)
+    );
+
+  animation:
+    farmerBreath
+    5s
+    ease-in-out
+    infinite;
+}
+
+.farmer-object .project-object-glow {
+  width: 78%;
+  height: 78%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(25,205,115,0.48),
+      transparent 68%
+    );
+
+  animation:
+    farmerGlow
+    4.5s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.project-information {
+  position: relative;
+
+  z-index: 6;
+
+  padding:
+    70px
+    8vw
+    70px
+    55px;
+
+  max-width: 760px;
+}
+
+.project-heading {
+  margin-bottom: 25px;
+}
+
+.project-index {
+  display: block;
+
+  margin-bottom: 15px;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.25em;
+
+  color: #ff542f;
+}
+
+.project-heading h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(54px,5vw,78px);
+
+  line-height: 0.9;
+
+  font-weight: 400;
+
+  letter-spacing: -0.04em;
+}
+
+.project-heading h3 {
+  margin:
+    15px 0 0;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.27em;
+
+  color: #ff542f;
+}
+
+.project-description {
+  max-width: 570px;
+
+  margin:
+    0 0 25px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #e9e7e2;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.project-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-bottom: 30px;
+}
+
+.project-tags span {
+  padding:
+    7px 10px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.16);
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  font-size: 6px;
+
+  letter-spacing: 0.15em;
+
+  color: #d4d6d6;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.project-enter {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  min-width: 130px;
+
+  padding:
+    15px 16px;
+
+  border:
+    1px solid
+    #ff542f;
+
+  background: transparent;
+
+  color: #f4f1eb;
+
+  cursor: pointer;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.2em;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.project-enter:hover {
+  background: #ff542f;
+
+  color: #03070a;
+
+  transform:
+    translateX(5px);
+}
+
+.project-arrow {
+  font-size: 13px;
+
+  transition:
+    transform 0.4s
+    cubic-bezier(0.16,1,0.3,1);
+}
+
+.project-enter:hover
+.project-arrow {
+  transform:
+    translate(4px,-4px);
+}
+
+
+/* =========================================================
+   SIDE LABEL
+========================================================= */
+
+.project-side-label {
+  position: absolute;
+
+  right: 20px;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(180deg);
+
+  writing-mode: vertical-rl;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  font-size: 6px;
+
+  letter-spacing: 0.2em;
+
+  color: #53616a;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.visual-status {
+  position: absolute;
+
+  top: 20px;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  font-size: 6px;
+
+  letter-spacing: 0.2em;
+
+  color: #56656c;
+}
+
+.status-dot {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #23d878;
+
+  box-shadow:
+    0 0 10px
+    #23d878;
+
+  animation:
+    statusPulse
+    2s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
+   COORDINATES
+========================================================= */
+
+.visual-coordinate {
+  position: absolute;
+
+  left: 18px;
+  bottom: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+}
+
+.visual-coordinate span {
+  font-size: 5px;
+
+  letter-spacing: 0.2em;
+
+  color: #56616a;
+}
+
+.visual-coordinate strong {
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+
+  color: #f1f0ec;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes vayuFloat {
+  0%, 100% {
+    transform:
+      translate3d(0,8px,0);
+  }
+
+  25% {
+    transform:
+      translate3d(-10px,-12px,0);
+  }
+
+  50% {
+    transform:
+      translate3d(5px,-27px,0);
+  }
+
+  75% {
+    transform:
+      translate3d(10px,-10px,0);
+  }
+}
+
+@keyframes vayuGlow {
+  0%, 100% {
+    opacity: 0.22;
+    transform: scale(0.94);
+  }
+
+  50% {
+    opacity: 0.46;
+    transform: scale(1.08);
+  }
+}
+
+
+@keyframes svasthyaFloat {
+  0%, 100% {
+    transform:
+      translateY(8px);
+  }
+
+  50% {
+    transform:
+      translateY(-22px);
+  }
+}
+
+@keyframes svasthyaBreath {
+  0%, 100% {
+    transform:
+      scale(0.96);
+  }
+
+  50% {
+    transform:
+      scale(1.04);
+  }
+}
+
+@keyframes svasthyaGlow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.92);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.08);
+  }
+}
+
+
+/* AJ FLOAT */
+
+@keyframes ajFloat {
+  0%, 100% {
+    transform:
+      translateY(8px);
+  }
+
+  50% {
+    transform:
+      translateY(-18px);
+  }
+}
+
+
+/*
+   ONLY THE CENTRAL AI/EARTH CORE.
+   The outer galaxy NEVER rotates.
+*/
+
+@keyframes ajCoreRotate {
+  from {
+    transform:
+      translate(-50%,-50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%,-50%)
+      rotate(360deg);
+  }
+}
+
+@keyframes ajGlow {
+  0%, 100% {
+    opacity: 0.22;
+    transform: scale(0.92);
+  }
+
+  50% {
+    opacity: 0.55;
+    transform: scale(1.1);
+  }
+}
+
+
+@keyframes farmerFloat {
+  0%, 100% {
+    transform:
+      translate3d(0,8px,0);
+  }
+
+  25% {
+    transform:
+      translate3d(-9px,-10px,0);
+  }
+
+  50% {
+    transform:
+      translate3d(5px,-23px,0);
+  }
+
+  75% {
+    transform:
+      translate3d(10px,-7px,0);
+  }
+}
+
+@keyframes farmerBreath {
+  0%, 100% {
+    transform:
+      scale(0.98);
+  }
+
+  50% {
+    transform:
+      scale(1.025);
+  }
+}
+
+@keyframes farmerGlow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.92);
+  }
+
+  50% {
+    opacity: 0.48;
+    transform: scale(1.08);
+  }
+}
+
+
+@keyframes orbitPulse {
+  0%, 100% {
+    opacity: 0.6;
+
+    transform:
+      translate(-50%,-50%)
+      scale(0.98);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      translate(-50%,-50%)
+      scale(1.03);
+  }
+}
+
+@keyframes orbitRotate {
+  from {
+    transform:
+      translate(-50%,-50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%,-50%)
+      rotate(360deg);
+  }
+}
+
+@keyframes orbitRotateReverse {
+  from {
+    transform:
+      translate(-50%,-50%)
+      rotate(360deg);
+  }
+
+  to {
+    transform:
+      translate(-50%,-50%)
+      rotate(0deg);
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform:
+      translate(0,0);
+
+    opacity: 0.45;
+  }
+
+  50% {
+    transform:
+      translate(10px,-18px);
+
+    opacity: 1;
+  }
+}
+
+@keyframes statusPulse {
+  0%, 100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .projects-header {
+    grid-template-columns:
+      70px
+      1fr;
+
+    gap: 35px;
+  }
+
+  .projects-intro {
+    grid-column: 2;
+  }
+
+  .project-item {
+    grid-template-columns:
+      44%
+      56%;
+  }
+
+  .project-information {
+    padding-left: 30px;
+    padding-right: 55px;
+  }
+
+  .project-object {
+    width: 330px;
+    height: 330px;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .projects-header {
+    padding:
+      55px 25px;
+
+    display: block;
+  }
+
+  .projects-index {
+    margin-bottom: 35px;
+  }
+
+  .projects-title h1 {
+    font-size:
+      clamp(55px,15vw,90px);
+  }
+
+  .projects-intro {
+    margin-top: 35px;
+  }
+
+  .project-item {
+    min-height: auto;
+
+    margin:
+      0 15px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .project-visual {
+    width: 100%;
+
+    min-height: 500px;
+    height: 500px;
+  }
+
+  .project-object {
+    width: 340px;
+    height: 340px;
+  }
+
+  .project-information {
+    width: 100%;
+
+    padding:
+      40px 35px 60px;
+  }
+
+  .project-side-label {
+    display: none;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .projects-title h1 {
+    font-size: 55px;
+  }
+
+  .project-visual {
+    min-height: 420px;
+    height: 420px;
+  }
+
+  .project-object {
+    width: 290px;
+    height: 290px;
+  }
+
+  .project-information {
+    padding:
+      35px 25px 50px;
+  }
+
+  .project-heading h2 {
+    font-size: 52px;
+  }
+
+  .project-description {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .vayu-object,
+  .svasthya-object,
+  .svasthya-object .project-logo,
+  .aj-object,
+  .aj-core-image,
+  .farmer-object,
+  .farmer-object .project-logo,
+  .project-object-glow,
+  .visual-orbit,
+  .visual-particle,
+  .status-dot {
+    animation: none !important;
+  }
+}

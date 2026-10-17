@@ -1,0 +1,900 @@
+/* =========================================================
+   SCREEN 3 — PROFILE
+   ========================================================= */
+
+.profile {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: 38% 1fr;
+
+  gap: 48px;
+
+  padding: 38px 42px 38px 70px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: #03070a;
+
+  color: #ffffff;
+
+  font-family: Inter, Arial, sans-serif;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+.profile-bg {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 65px 65px;
+}
+
+
+/* =========================================================
+   LEFT PHOTO AREA
+   ========================================================= */
+
+.profile-visual {
+  position: relative;
+
+  z-index: 2;
+
+  min-width: 0;
+
+  height: calc(100vh - 76px);
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   PROFILE NUMBER
+   ========================================================= */
+
+.profile-number {
+  position: absolute;
+
+  left: -45px;
+  top: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  z-index: 10;
+}
+
+.profile-number span {
+  color: #ff6533;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+.profile-number i {
+  width: 22px;
+  height: 1px;
+
+  background: #ff6533;
+}
+
+.profile-number small {
+  color: #6f7a82;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 6px;
+
+  letter-spacing: 3px;
+
+  writing-mode: vertical-rl;
+}
+
+
+/* =========================================================
+   PHOTO
+   ========================================================= */
+
+.photo-wrap {
+  position: relative;
+
+  width: 100%;
+
+  /*
+    Tall enough to extend down the screen.
+  */
+  height: calc(100vh - 105px);
+
+  min-height: 600px;
+
+  overflow: hidden;
+
+  background: #03070a;
+}
+
+
+/*
+   HARDER CROP.
+
+   The original image contains the checkerboard background.
+   We are NOT editing the image.
+   We are simply zooming into the existing subject.
+*/
+
+.photo-wrap img {
+  display: block;
+
+  width: 168%;
+
+  height: 168%;
+
+  max-width: none;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transform: translate(-23%, -14%);
+
+  filter: none;
+}
+
+
+/*
+   IMPORTANT:
+   No artificial blur.
+   No gradient over the face.
+   No brightness adjustment.
+*/
+
+.photo-wrap::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 86%,
+      #03070a 100%
+    ),
+    linear-gradient(
+      0deg,
+      #03070a 0%,
+      transparent 8%
+    );
+}
+
+
+/* =========================================================
+   PHOTO LABEL
+   ========================================================= */
+
+.photo-meta {
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  z-index: 20;
+
+  display: flex;
+
+  gap: 18px;
+}
+
+.photo-meta span {
+  color: #ffffff;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 2px;
+}
+
+.photo-meta span:first-child {
+  color: #ff6533;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+   ========================================================= */
+
+.profile-content {
+  position: relative;
+
+  z-index: 3;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   NAME + EDUCATION
+   ========================================================= */
+
+.profile-top {
+  display: grid;
+
+  grid-template-columns: 1.08fr 0.92fr;
+
+  gap: 28px;
+
+  align-items: start;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+
+/* =========================================================
+   NAME
+   ========================================================= */
+
+.profile-header {
+  min-width: 0;
+}
+
+.profile-role {
+  color: #ffffff;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+}
+
+.profile-role b {
+  color: #ff6533;
+
+  margin: 0 9px;
+}
+
+.profile-header h1 {
+  margin: 14px 0 0;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(64px, 5.2vw, 90px);
+
+  font-weight: 400;
+
+  line-height: 0.82;
+
+  letter-spacing: -5px;
+}
+
+.profile-header h1 em {
+  color: #ff6533;
+
+  font-style: normal;
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.top-education {
+  padding-top: 8px;
+
+  min-width: 0;
+}
+
+.education {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.education-icon {
+  width: 40px;
+  height: 40px;
+
+  flex: 0 0 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  color: #42b9ff;
+
+  font-size: 18px;
+}
+
+.education-details {
+  min-width: 0;
+}
+
+.education h3 {
+  margin: 0 0 7px;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.35;
+}
+
+.education span {
+  color: #ff7040;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+}
+
+.education p {
+  margin: 7px 0 0;
+
+  color: #ffffff;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 7px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.profile-section {
+  padding: 17px 0 19px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 13px;
+}
+
+.section-title span {
+  color: #ff6533;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+}
+
+.section-title i {
+  width: 22px;
+  height: 1px;
+
+  background: #ff6533;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-content {
+  max-width: 1080px;
+}
+
+.about-content p {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 12px;
+
+  line-height: 1.48;
+}
+
+.about-content strong {
+  color: #ff7040;
+
+  font-weight: 600;
+}
+
+.about-content .about-lead {
+  color: #ffffff;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  margin-bottom: 10px;
+}
+
+.about-content .about-goal {
+  margin-top: 11px;
+
+  color: #ffffff;
+}
+
+.about-content .about-final {
+  margin-top: 12px;
+
+  margin-bottom: 0;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   SKILLS — LARGE
+   ========================================================= */
+
+.skills-section {
+  padding-top: 19px;
+
+  padding-bottom: 20px;
+}
+
+.skills {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.skill {
+  min-height: 88px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(7, 13, 17, 0.42);
+
+  text-align: center;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.skill:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(255, 255, 255, 0.38);
+
+  background: rgba(10, 18, 23, 0.75);
+}
+
+.skill-icon {
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 19px;
+}
+
+.skill > span:last-child {
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 11px;
+
+  line-height: 1.25;
+}
+
+.skill-blue .skill-icon {
+  color: #42b9ff;
+}
+
+.skill-green .skill-icon {
+  color: #1bd49d;
+}
+
+.skill-purple .skill-icon {
+  color: #a17cff;
+}
+
+.skill-orange .skill-icon {
+  color: #ff713c;
+}
+
+.skill-gold .skill-icon {
+  color: #f2b934;
+}
+
+.skill-cyan .skill-icon {
+  color: #34bfd6;
+}
+
+
+/* =========================================================
+   WORK EXPERIENCE — LARGE + VISIBLE
+   ========================================================= */
+
+.experience-section {
+  padding-top: 20px;
+
+  padding-bottom: 24px;
+}
+
+.experience {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+.experience-item {
+  min-width: 0;
+
+  min-height: 90px;
+
+  display: grid;
+
+  grid-template-columns: 24px 1fr;
+
+  gap: 12px;
+
+  padding: 8px 0;
+}
+
+.experience-index {
+  color: #ff6533;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 9px;
+
+  padding-top: 3px;
+}
+
+.experience-details {
+  min-width: 0;
+}
+
+.experience-item small {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #bfc5c8;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 1.1px;
+}
+
+.experience-item h3 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+.experience-item p {
+  display: block;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  line-height: 1.45;
+
+  white-space: normal;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+  .profile {
+    grid-template-columns: 38% 1fr;
+
+    gap: 58px;
+
+    padding-left: 76px;
+  }
+
+  .photo-wrap {
+    height: calc(100vh - 105px);
+  }
+
+  .about-content p {
+    font-size: 13px;
+  }
+
+  .about-content .about-lead {
+    font-size: 15px;
+  }
+
+  .skill {
+    min-height: 92px;
+  }
+
+  .skill > span:last-child {
+    font-size: 12px;
+  }
+
+  .experience-item h3 {
+    font-size: 19px;
+  }
+
+  .experience-item p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (min-width: 900px) and (max-width: 1199px) {
+
+  .profile {
+    grid-template-columns: 36% 1fr;
+
+    gap: 30px;
+
+    padding: 34px 28px 32px 62px;
+  }
+
+  .photo-wrap {
+    height: 650px;
+  }
+
+  .profile-top {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .profile-header h1 {
+    font-size: 68px;
+  }
+
+  .about-content p {
+    font-size: 10px;
+  }
+
+  .about-content .about-lead {
+    font-size: 12px;
+  }
+
+  .skill {
+    min-height: 82px;
+  }
+
+  .skill > span:last-child {
+    font-size: 10px;
+  }
+
+  .experience {
+    gap: 18px;
+  }
+
+  .experience-item h3 {
+    font-size: 15px;
+  }
+
+  .experience-item p {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 899px) {
+
+  .profile {
+    display: block;
+
+    min-height: auto;
+
+    padding: 70px 30px 50px 65px;
+  }
+
+  .profile-visual {
+    height: auto;
+
+    margin-bottom: 45px;
+  }
+
+  .profile-content {
+    height: auto;
+  }
+
+  .photo-wrap {
+    max-width: 500px;
+
+    height: 600px;
+  }
+
+  .profile-top {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-header h1 {
+    font-size: 72px;
+  }
+
+  .experience {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .profile {
+    padding: 60px 18px 45px;
+  }
+
+  .profile-number {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+  }
+
+  .profile-number small {
+    writing-mode: horizontal-tb;
+  }
+
+  .photo-wrap {
+    height: 470px;
+  }
+
+  .profile-header h1 {
+    font-size: 58px;
+
+    letter-spacing: -3px;
+  }
+
+  .about-content p {
+    font-size: 11px;
+  }
+
+  .about-content .about-lead {
+    font-size: 13px;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience {
+    display: block;
+  }
+
+  .experience-item {
+    margin-bottom: 22px;
+  }
+
+  .experience-item h3 {
+    font-size: 17px;
+  }
+
+  .experience-item p {
+    font-size: 11px;
+  }
+}
