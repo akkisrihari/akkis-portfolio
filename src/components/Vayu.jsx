@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Vayu.css";
 import achievementPhoto1 from "../assets/vayuvega-achievement-1.png";
 import achievementPhoto2 from "../assets/vayuvega-achievement-2.png";
-import vayuOneSlide from "../assets/Vayu_One_Slide.png";
+import vayuOneSlide from "../assets/Vayu_one_slide.png";
 
 import vayuShortVideo from "../assets/videos/vayu-short-compressed.mp4";
 import vayuFullVideo from "../assets/videos/vayu-full-compressed.mp4";
