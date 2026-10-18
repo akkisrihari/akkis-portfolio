@@ -1,4 +1,6 @@
+
 import { useEffect, useRef } from "react";
+import introVideo from "../assets/intro.mp4";
 import "./Intro.css";
 
 export default function Intro({ onComplete }) {
@@ -25,7 +27,7 @@ export default function Intro({ onComplete }) {
       <video
         ref={videoRef}
         className="intro-video"
-        src="/src/assets/intro.mp4"
+        src={introVideo}
         autoPlay
         muted
         playsInline
