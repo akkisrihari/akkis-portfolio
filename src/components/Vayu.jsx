@@ -4,8 +4,8 @@ import achievementPhoto1 from "../assets/vayuvega-achievement-1.png";
 import achievementPhoto2 from "../assets/vayuvega-achievement-2.png";
 import vayuOneSlide from "../assets/Vayu_One_Slide.png";
 
-import vayuShortVideo from "../assets/videos/vayu-short.mp4";
-import vayuFullVideo from "../assets/videos/vayu-full.mp4";
+import vayuShortVideo from "../assets/videos/vayu-short-compressed.mp4";
+import vayuFullVideo from "../assets/videos/vayu-full-compressed.mp4";
 
 const screenshots = [
   {
