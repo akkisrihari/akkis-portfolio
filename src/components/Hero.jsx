@@ -1,9 +1,10 @@
+﻿import { asset } from "../utils/assets";
 import "./Hero.css";
 
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-background" aria-hidden="true" />
+      <div className="hero-background" aria-hidden="true" style={{ backgroundImage: `url("${asset("hero.png")}")` }} />
       <div className="hero-overlay" aria-hidden="true" />
 
       <header className="hero-nav">
@@ -26,7 +27,7 @@ export default function Hero() {
           <a href="#contact">CONTACT</a>
 
           <a className="hero-talk" href="#contact">
-            LET'S TALK ↗
+            LET'S TALK â†—
           </a>
         </nav>
       </header>
@@ -45,7 +46,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero-statement">
-            They don't just work—
+            They don't just workâ€”
             <br />
             they <em>change</em> how people work.
           </p>
@@ -58,11 +59,11 @@ export default function Hero() {
 
           <div className="hero-actions">
             <a className="hero-primary" href="#projects">
-              VIEW PROJECTS <span>→</span>
+              VIEW PROJECTS <span>â†’</span>
             </a>
 
             <a className="hero-secondary" href="#contact">
-              LET'S TALK <span>↗</span>
+              LET'S TALK <span>â†—</span>
             </a>
           </div>
 
@@ -92,17 +93,17 @@ export default function Hero() {
 
       <footer className="hero-footer">
         <div className="hero-location">
-          <span className="hero-location-icon">●</span>
+          <span className="hero-location-icon">â—</span>
 
           <div>
             <strong>HYDERABAD, INDIA</strong>
-            <span>17.3850° N / 78.4867° E</span>
+            <span>17.3850Â° N / 78.4867Â° E</span>
           </div>
         </div>
 
         <div className="hero-scroll">
           <span>SCROLL TO EXPLORE</span>
-          <span className="hero-scroll-icon">↓</span>
+          <span className="hero-scroll-icon">â†“</span>
         </div>
 
         <div className="hero-availability">
