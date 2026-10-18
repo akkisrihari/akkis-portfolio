@@ -1,3 +1,4 @@
+﻿import { asset } from "../utils/assets";
 import { useEffect, useRef, useState } from "react";
 import "./Vayu.css";
 import achievementPhoto1 from "../assets/vayuvega-achievement-1.png";
@@ -9,19 +10,19 @@ import vayuFullVideo from "../assets/videos/vayu-full-compressed.mp4";
 
 const screenshots = [
   {
-    image: "/src/assets/vayu-shot-1.png",
+    image: asset("vayu-shot-1.png"),
     title: "Spatial Analysis & Mapping",
   },
   {
-    image: "/src/assets/vayu-shot-2.png",
+    image: asset("vayu-shot-2.png"),
     title: "AI-Powered Spatial Insights",
   },
   {
-    image: "/src/assets/vayu-shot-3.png",
+    image: asset("vayu-shot-3.png"),
     title: "Real-World Planning & Simulation",
   },
   {
-    image: "/src/assets/vayu-shot-4.png",
+    image: asset("vayu-shot-4.png"),
     title: "Agricultural Intelligence",
   },
 ];
@@ -132,7 +133,7 @@ export default function Vayu({ onBack }) {
             type="button"
             onClick={onBack}
           >
-            ← BACK TO PROJECTS
+            â† BACK TO PROJECTS
           </button>
 
           <span className="vayu-eyebrow">
@@ -171,7 +172,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={openLiveDemo}
             >
-              GO LIVE <span>↗</span>
+              GO LIVE <span>â†—</span>
             </button>
 
             <button
@@ -179,7 +180,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={() => setShowWalkthroughs(true)}
             >
-              WATCH WALKTHROUGH <span>▶</span>
+              WATCH WALKTHROUGH <span>â–¶</span>
             </button>
 
             <button
@@ -187,7 +188,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={openGitHub}
             >
-              GITHUB <span>↗</span>
+              GITHUB <span>â†—</span>
             </button>
 
             <button
@@ -195,7 +196,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={() => setShowAchievements(true)}
             >
-              ACHIEVEMENTS <span>🏆</span>
+              ACHIEVEMENTS <span>ðŸ†</span>
             </button>
 
           </div>
@@ -219,7 +220,7 @@ export default function Vayu({ onBack }) {
           <div>
             <span>CURRENT FOCUS</span>
             <strong>
-              Agriculture · Home · Construction
+              Agriculture Â· Home Â· Construction
             </strong>
           </div>
 
@@ -233,7 +234,7 @@ export default function Vayu({ onBack }) {
           <div>
             <span>ROLE</span>
             <strong>
-              Product · AI · Full Stack
+              Product Â· AI Â· Full Stack
             </strong>
           </div>
 
@@ -257,7 +258,7 @@ export default function Vayu({ onBack }) {
             className="vayu-floating-logo"
           >
             <img
-              src="/src/assets/vayu-logo.png"
+              src={asset("vayu-logo.png")}
               alt="Vayu"
             />
           </div>
@@ -534,7 +535,7 @@ export default function Vayu({ onBack }) {
             </div>
 
             <i>
-              →
+              â†’
             </i>
 
             <div>
@@ -555,7 +556,7 @@ export default function Vayu({ onBack }) {
             </div>
 
             <i>
-              →
+              â†’
             </i>
 
             <div>
@@ -576,7 +577,7 @@ export default function Vayu({ onBack }) {
             </div>
 
             <i>
-              →
+              â†’
             </i>
 
             <div>
@@ -691,7 +692,7 @@ export default function Vayu({ onBack }) {
           <Progress
             name="Additional Domains"
             value="Planned"
-            percent="—"
+            percent="â€”"
           />
 
         </div>
@@ -764,7 +765,7 @@ export default function Vayu({ onBack }) {
             type="button"
             onClick={openGitHub}
           >
-            GITHUB ↗
+            GITHUB â†—
           </button>
 
         </div>
@@ -793,7 +794,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={openLiveDemo}
             >
-              GO LIVE <span>↗</span>
+              GO LIVE <span>â†—</span>
             </button>
 
             <button
@@ -801,7 +802,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={() => setShowWalkthroughs(true)}
             >
-              WATCH WALKTHROUGH <span>▶</span>
+              WATCH WALKTHROUGH <span>â–¶</span>
             </button>
 
           </div>
@@ -834,7 +835,7 @@ export default function Vayu({ onBack }) {
               aria-label="Close achievements"
               onClick={() => setShowAchievements(false)}
             >
-              ×
+              Ã—
             </button>
 
             <div className="vayu-achievement-celebration" aria-hidden="true">
@@ -857,7 +858,7 @@ export default function Vayu({ onBack }) {
                   }}
                 />
               ))}
-              <div className="vayu-achievement-spark">✦</div>
+              <div className="vayu-achievement-spark">âœ¦</div>
             </div>
 
             <span className="vayu-section-label">
@@ -951,7 +952,7 @@ export default function Vayu({ onBack }) {
                 setSelectedVideo(null);
               }}
             >
-              ×
+              Ã—
             </button>
 
             {!selectedVideo ? (
@@ -978,7 +979,7 @@ export default function Vayu({ onBack }) {
                       })
                     }
                   >
-                    <span>▶</span>
+                    <span>â–¶</span>
 
                     <div>
                       <strong>
@@ -986,17 +987,17 @@ export default function Vayu({ onBack }) {
                       </strong>
 
                       <small>
-                        3 MINUTES · QUICK PRODUCT DEMO
+                        3 MINUTES Â· QUICK PRODUCT DEMO
                       </small>
 
                       <p>
-                        A concise tour of Vayu — the core product,
+                        A concise tour of Vayu â€” the core product,
                         experience, and how the spatial intelligence
                         workflow comes together.
                       </p>
                     </div>
 
-                    <b>↗</b>
+                    <b>â†—</b>
                   </button>
 
                   <button
@@ -1009,7 +1010,7 @@ export default function Vayu({ onBack }) {
                       })
                     }
                   >
-                    <span>▶</span>
+                    <span>â–¶</span>
 
                     <div>
                       <strong>
@@ -1017,7 +1018,7 @@ export default function Vayu({ onBack }) {
                       </strong>
 
                       <small>
-                        13 MINUTES · COMPLETE PRODUCT DEMO
+                        13 MINUTES Â· COMPLETE PRODUCT DEMO
                       </small>
 
                       <p>
@@ -1027,7 +1028,7 @@ export default function Vayu({ onBack }) {
                       </p>
                     </div>
 
-                    <b>↗</b>
+                    <b>â†—</b>
                   </button>
 
                 </div>
@@ -1050,7 +1051,7 @@ export default function Vayu({ onBack }) {
                     type="button"
                     onClick={() => setSelectedVideo(null)}
                   >
-                    ← BACK
+                    â† BACK
                   </button>
 
                 </div>
@@ -1108,7 +1109,7 @@ function Progress({
           }`}
           style={{
             width:
-              percent === "—"
+              percent === "â€”"
                 ? "5%"
                 : percent,
           }}

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./AJ.css";
+import ajLogo from "../assets/aj-logo.png";
 
 const capabilities = [
   {
@@ -325,7 +326,7 @@ export default function AJ({ onBack }) {
 
           <div className="aj-logo-float">
             <img
-              src="/src/assets/aj-logo.png"
+              src={ajLogo}
               alt="AJ Personal AI Assistant logo"
             />
           </div>

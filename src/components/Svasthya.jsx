@@ -1,3 +1,4 @@
+﻿import { asset } from "../utils/assets";
 import "./Svasthya.css";
 import { Lottie } from "lottie-react";
 
@@ -9,85 +10,85 @@ const journeySteps = [
     number: "01",
     title: "LOGIN",
     description: "Secure and simple access.",
-    image: "/src/assets/svasthya-login.png",
+    image: asset("svasthya-login.png"),
   },
   {
     number: "02",
     title: "PERSONALIZE",
     description: "Share your personal health details.",
-    image: "/src/assets/svasthya-profile.png",
+    image: asset("svasthya-profile.png"),
   },
   {
     number: "03",
     title: "MEET SETU",
     description: "Your guide across health and tradition.",
-    image: "/src/assets/svasthya-setu-intro.png",
+    image: asset("svasthya-setu-intro.png"),
   },
   {
     number: "04",
     title: "HOME",
     description: "Your personalized daily overview.",
-    image: "/src/assets/svasthya-home.png",
+    image: asset("svasthya-home.png"),
   },
   {
     number: "05",
     title: "HEALTH INTRO",
     description: "Enter the Health domain.",
-    image: "/src/assets/svasthya-health-intro.png",
+    image: asset("svasthya-health-intro.png"),
   },
   {
     number: "06",
     title: "HEALTH DASHBOARD",
     description: "Explore health status and subdomains.",
-    image: "/src/assets/svasthya-health.png",
+    image: asset("svasthya-health.png"),
   },
   {
     number: "07",
     title: "WORKOUT & YOGA",
     description: "Choose movement experiences.",
-    image: "/src/assets/svasthya-workout-yoga.png",
+    image: asset("svasthya-workout-yoga.png"),
   },
   {
     number: "08",
     title: "WORKOUT SESSION",
     description: "Train with guided workout support.",
-    image: "/src/assets/svasthya-workout.png",
+    image: asset("svasthya-workout.png"),
   },
   {
     number: "09",
     title: "YOGA",
     description: "Begin a guided yoga experience.",
-    image: "/src/assets/svasthya-yoga.png",
+    image: asset("svasthya-yoga.png"),
   },
   {
     number: "10",
     title: "GUIDED YOGA",
     description: "Follow individual yoga poses and guidance.",
-    image: "/src/assets/svasthya-yoga-session.png",
+    image: asset("svasthya-yoga-session.png"),
   },
   {
     number: "11",
     title: "IRA AI",
     description: "Personalized diet and nutrition guidance.",
-    image: "/src/assets/svasthya-ira.png",
+    image: asset("svasthya-ira.png"),
   },
   {
     number: "12",
     title: "DR NOVA",
     description: "AI healthcare assistance.",
-    image: "/src/assets/svasthya-dr-nova.png",
+    image: asset("svasthya-dr-nova.png"),
   },
   {
     number: "13",
     title: "TRADITIONAL INTRO",
     description: "Enter the Traditional domain.",
-    image: "/src/assets/svasthya-traditional-intro.png",
+    image: asset("svasthya-traditional-intro.png"),
   },
   {
     number: "14",
     title: "TRADITIONAL DASHBOARD",
     description: "Explore traditional experiences.",
-    image: "/src/assets/svasthya-traditional.png",
+    image: asset("svasthya-traditional.png"),
   },
 ];
 
@@ -106,7 +107,7 @@ const assistants = [
     description:
       "A specialized workout companion that guides training and helps users through their exercise experience.",
     className: "assistant-leo",
-    image: "/src/assets/leo.png",
+    image: asset("leo.png"),
   },
   {
     name: "AIRA",
@@ -114,7 +115,7 @@ const assistants = [
     description:
       "A specialized yoga guide supporting the user's practice and helping through individual sessions.",
     className: "assistant-aira",
-    image: "/src/assets/anagha.png",
+    image: asset("anagha.png"),
   },
   {
     name: "ANAGHA",
@@ -122,7 +123,7 @@ const assistants = [
     description:
       "A nutrition companion for diet plans, weight goals, meals, recipes, and meal analysis.",
     className: "assistant-anagha",
-    image: "/src/assets/ira.png",
+    image: asset("ira.png"),
   },
   {
     name: "DR NOVA",
@@ -138,7 +139,7 @@ const healthDomains = [
   {
     title: "YOGA & EXERCISE",
     subtitle: "Personalized movement with specialized AI.",
-    assistant: "LEO · AIRA",
+    assistant: "LEO Â· AIRA",
   },
   {
     title: "DIET & NUTRITION",
@@ -226,7 +227,7 @@ function Svasthya({ onBack }) {
           className="sv-back"
           onClick={onBack}
         >
-          <span>←</span>
+          <span>â†</span>
           BACK TO PROJECTS
         </button>
 
@@ -250,7 +251,7 @@ function Svasthya({ onBack }) {
         <div className="sv-hero-copy">
 
           <span className="sv-eyebrow">
-            FLUTTER · AI · PRODUCT ENGINEERING
+            FLUTTER Â· AI Â· PRODUCT ENGINEERING
           </span>
 
           <h1>
@@ -278,7 +279,7 @@ function Svasthya({ onBack }) {
               className="sv-primary-button"
             >
               EXPLORE THE EXPERIENCE
-              <span>↘</span>
+              <span>â†˜</span>
             </a>
 
             <a
@@ -288,7 +289,7 @@ function Svasthya({ onBack }) {
               className="sv-secondary-button"
             >
               GITHUB
-              <span>↗</span>
+              <span>â†—</span>
             </a>
 
           </div>
@@ -300,7 +301,7 @@ function Svasthya({ onBack }) {
 
         </div>
 
-        {/* RIGHT SIDE — FLOATING SVASTHYA LOGO */}
+        {/* RIGHT SIDE â€” FLOATING SVASTHYA LOGO */}
 
         <div className="sv-hero-visual">
 
@@ -315,7 +316,7 @@ function Svasthya({ onBack }) {
             <div className="sv-logo-ring" />
 
             <img
-              src="/src/assets/svasthya-logo.png"
+              src={asset("svasthya-logo.png")}
               alt="Svasthya"
             />
 
@@ -339,7 +340,7 @@ function Svasthya({ onBack }) {
             HEALTH
           </span>
 
-          <i>×</i>
+          <i>Ã—</i>
 
           <span>
             TRADITIONAL
@@ -375,7 +376,7 @@ function Svasthya({ onBack }) {
 
             <p>
               Svasthya brings together two major
-              domains — <strong>Health</strong> and
+              domains â€” <strong>Health</strong> and
               <strong> Traditional</strong>.
             </p>
 
@@ -394,7 +395,7 @@ function Svasthya({ onBack }) {
 
           <article className="sv-feature-card">
             <span>01</span>
-            <div className="sv-feature-icon">◉</div>
+            <div className="sv-feature-icon">â—‰</div>
             <h3>
               PERSONALIZED
               <br />
@@ -409,7 +410,7 @@ function Svasthya({ onBack }) {
 
           <article className="sv-feature-card">
             <span>02</span>
-            <div className="sv-feature-icon">✦</div>
+            <div className="sv-feature-icon">âœ¦</div>
             <h3>
               SPECIALIZED
               <br />
@@ -423,11 +424,11 @@ function Svasthya({ onBack }) {
 
           <article className="sv-feature-card">
             <span>03</span>
-            <div className="sv-feature-icon">◈</div>
+            <div className="sv-feature-icon">â—ˆ</div>
             <h3>
               HEALTH
               <br />
-              × TRADITIONAL
+              Ã— TRADITIONAL
             </h3>
             <p>
               Modern digital experiences
@@ -437,7 +438,7 @@ function Svasthya({ onBack }) {
 
           <article className="sv-feature-card">
             <span>04</span>
-            <div className="sv-feature-icon">↗</div>
+            <div className="sv-feature-icon">â†—</div>
             <h3>
               AUTOMATION
               <br />
@@ -516,7 +517,7 @@ function Svasthya({ onBack }) {
 
               {index !== 6 && (
                 <div className="sv-journey-arrow">
-                  →
+                  â†’
                 </div>
               )}
 
@@ -558,7 +559,7 @@ function Svasthya({ onBack }) {
 
               {index !== 6 && (
                 <div className="sv-journey-arrow">
-                  →
+                  â†’
                 </div>
               )}
 
@@ -615,7 +616,7 @@ function Svasthya({ onBack }) {
 
           <div className="sv-health-phone">
             <PhoneFrame
-              image="/src/assets/svasthya-health.png"
+              image={asset("svasthya-health.png")}
               title="Svasthya Health"
             />
           </div>
@@ -650,7 +651,7 @@ function Svasthya({ onBack }) {
                   </div>
 
                   <span className="sv-domain-arrow">
-                    ↗
+                    â†—
                   </span>
 
                 </article>
@@ -687,7 +688,7 @@ function Svasthya({ onBack }) {
 
           <p>
             Svasthya's assistants are connected
-            to the domains they serve — making
+            to the domains they serve â€” making
             the interaction contextual to the
             user's activity.
           </p>
@@ -765,21 +766,21 @@ function Svasthya({ onBack }) {
             CONVERSATION
           </div>
 
-          <i>→</i>
+          <i>â†’</i>
 
           <div>
             <span>02</span>
             UNDERSTANDING
           </div>
 
-          <i>→</i>
+          <i>â†’</i>
 
           <div>
             <span>03</span>
             DOMAIN INTELLIGENCE
           </div>
 
-          <i>→</i>
+          <i>â†’</i>
 
           <div>
             <span>04</span>
@@ -820,7 +821,7 @@ function Svasthya({ onBack }) {
             </p>
 
             <div className="sv-traditional-mark">
-              <span>स्वास्थ्य</span>
+              <span>à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯</span>
               <small>
                 Being rooted in the self.
               </small>
@@ -832,7 +833,7 @@ function Svasthya({ onBack }) {
 
             <div className="sv-traditional-phone">
               <PhoneFrame
-                image="/src/assets/svasthya-traditional.png"
+                image={asset("svasthya-traditional.png")}
                 title="Traditional"
               />
             </div>
@@ -979,14 +980,14 @@ function Svasthya({ onBack }) {
               rel="noreferrer"
             >
               VIEW ON GITHUB
-              <span>↗</span>
+              <span>â†—</span>
             </a>
 
             <button
               type="button"
               onClick={onBack}
             >
-              ← BACK TO PROJECTS
+              â† BACK TO PROJECTS
             </button>
 
           </div>
@@ -995,7 +996,7 @@ function Svasthya({ onBack }) {
 
         <div className="sv-footer-bottom">
           <span>
-            SVASTHYA · HEALTH × TRADITIONAL
+            SVASTHYA Â· HEALTH Ã— TRADITIONAL
           </span>
 
           <span>

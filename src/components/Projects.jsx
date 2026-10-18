@@ -1,3 +1,4 @@
+﻿import { asset } from "../utils/assets";
 import { useEffect, useRef } from "react";
 import "./Projects.css";
 
@@ -9,7 +10,7 @@ const projects = [
     subtitle: "AI SPATIAL INTELLIGENCE",
     description:
       "An AI spatial intelligence platform that combines geospatial data, spatial reasoning, AI, and visualization to understand real-world spaces and generate actionable insights.",
-    logo: "/src/assets/vayu-logo.png",
+    logo: asset("vayu-logo.png"),
     tags: [
       "SPATIAL AI",
       "GEOSPATIAL DATA",
@@ -25,7 +26,7 @@ const projects = [
     subtitle: "MULTI-DOMAIN INTELLIGENT PLATFORM",
     description:
       "An intelligent platform combining Traditional and Health domains with specialized AI assistants, personalized experiences, workflows, and automation.",
-    logo: "/src/assets/svasthya-logo.png",
+    logo: asset("svasthya-logo.png"),
     tags: [
       "HEALTH",
       "TRADITIONAL",
@@ -41,7 +42,7 @@ const projects = [
     subtitle: "INTELLIGENT AI ASSISTANT",
     description:
       "An intelligent assistant designed around natural interaction, productivity, information access, automation, and everyday problem solving.",
-    logo: "/src/assets/aj-logo.png",
+    logo: asset("aj-logo.png"),
     tags: [
       "AI ASSISTANT",
       "NATURAL LANGUAGE",
@@ -57,7 +58,7 @@ const projects = [
     subtitle: "AGRICULTURAL INTELLIGENCE",
     description:
       "An AI-driven agricultural intelligence platform bringing together land, soil, satellite, and agricultural data to support better decisions.",
-    logo: "/src/assets/farmer-ai-logo.png",
+    logo: asset("farmer-ai-logo.png"),
     tags: [
       "SOIL INTELLIGENCE",
       "LAND DATA",
@@ -304,7 +305,7 @@ function ProjectItem({
           </span>
 
           <span className="project-arrow">
-            ↗
+            â†—
           </span>
         </button>
       </div>
@@ -312,16 +313,16 @@ function ProjectItem({
       <div className="project-side-label">
         <span>
           {project.id === "vayu" &&
-            "UNDERSTAND · ANALYZE · REASON · PLAN · VISUALIZE"}
+            "UNDERSTAND Â· ANALYZE Â· REASON Â· PLAN Â· VISUALIZE"}
 
           {project.id === "svasthya" &&
-            "HEALTH · TRADITION · TECHNOLOGY · A BETTER YOU"}
+            "HEALTH Â· TRADITION Â· TECHNOLOGY Â· A BETTER YOU"}
 
           {project.id === "aj" &&
-            "ASK · LEARN · AUTOMATE · GET THINGS DONE"}
+            "ASK Â· LEARN Â· AUTOMATE Â· GET THINGS DONE"}
 
           {project.id === "farmer" &&
-            "LAND · SOIL · DATA · INTELLIGENCE"}
+            "LAND Â· SOIL Â· DATA Â· INTELLIGENCE"}
         </span>
       </div>
     </article>
@@ -350,7 +351,7 @@ export default function Projects({
 
         <div className="projects-title">
           <p>
-            THINGS I’VE BUILT.
+            THINGS Iâ€™VE BUILT.
           </p>
 
           <h1>
@@ -406,7 +407,7 @@ export default function Projects({
         </span>
 
         <i>
-          ↓
+          â†“
         </i>
 
       </footer>

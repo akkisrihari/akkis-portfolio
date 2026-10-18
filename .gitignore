@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .vercel
+
+src/assets/videos/vayu-full.mp4
+src/assets/videos/vayu-short.mp4

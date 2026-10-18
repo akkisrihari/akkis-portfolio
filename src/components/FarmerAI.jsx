@@ -1,3 +1,4 @@
+﻿import { asset } from "../utils/assets";
 import { useEffect } from "react";
 import {
   ArrowLeft,
@@ -29,7 +30,7 @@ import farmerLayers from "../assets/farmer-layers.png";
 import farmerSatellite from "../assets/farmer-satellite.png";
 import "./FarmerAI.css";
 
-const farmerLogo = "/src/assets/farmer-ai-logo.png";
+const farmerLogo = asset("farmer-ai-logo.png");
 const githubUrl = "https://github.com/akkisrihari";
 
 function Github({ size = 18 }) {
@@ -266,7 +267,7 @@ export default function FarmerAI({ onBack }) {
         </button>
 
         <a href="#farmer-top" className="farmer-nav-brand">
-          AKKI SRIHARI <span>●</span>
+          AKKI SRIHARI <span>â—</span>
         </a>
 
         <div className="farmer-nav-links">
@@ -299,7 +300,7 @@ export default function FarmerAI({ onBack }) {
           <p className="farmer-hero-description">
             An AI-powered agricultural intelligence platform connecting land
             analysis, soil conditions, crop health, weather and farm planning.
-            Clear information, transparent sources and practical guidance —
+            Clear information, transparent sources and practical guidance â€”
             without pretending unavailable data is certain.
           </p>
 
@@ -323,7 +324,7 @@ export default function FarmerAI({ onBack }) {
           </div>
 
           <p className="farmer-development">
-            <span /> IN DEVELOPMENT <i>·</i> DATA-FIRST APPROACH
+            <span /> IN DEVELOPMENT <i>Â·</i> DATA-FIRST APPROACH
           </p>
 
           <div className="farmer-hero-stats">
@@ -374,7 +375,7 @@ export default function FarmerAI({ onBack }) {
         </div>
 
         <a href="#farmer-intro" className="farmer-scroll-cue">
-          SCROLL TO EXPLORE <span>↓</span>
+          SCROLL TO EXPLORE <span>â†“</span>
         </a>
       </section>
 
@@ -474,7 +475,7 @@ export default function FarmerAI({ onBack }) {
             <div className="farmer-search-bar">
               <ScanSearch size={16} />
               <span>Search location, village, survey number...</span>
-              <small>⌖ USE MY LOCATION</small>
+              <small>âŒ– USE MY LOCATION</small>
             </div>
 
             <div className="farmer-dashboard-map">
@@ -484,8 +485,8 @@ export default function FarmerAI({ onBack }) {
                 className="farmer-satellite-image"
               />
 
-              <span className="farmer-map-marker marker-one">⌖</span>
-              <span className="farmer-map-marker marker-two">⌖</span>
+              <span className="farmer-map-marker marker-one">âŒ–</span>
+              <span className="farmer-map-marker marker-two">âŒ–</span>
 
               <div className="farmer-map-data soil-data">
                 <small>SOIL INDICATOR</small>
@@ -701,7 +702,7 @@ export default function FarmerAI({ onBack }) {
               ["Mobile app expansion", "FUTURE SCOPE"],
             ].map(([title, status], index) => (
               <div key={title}>
-                <span className="farmer-status-check">{index < 2 ? "✓" : "○"}</span>
+                <span className="farmer-status-check">{index < 2 ? "âœ“" : "â—‹"}</span>
                 <b>{title}</b>
                 <small>{status}</small>
               </div>
@@ -738,7 +739,7 @@ export default function FarmerAI({ onBack }) {
         <div className="farmer-final-copy">
           <p className="farmer-label">08 / NEXT STEPS</p>
           <h2>
-            Let’s build
+            Letâ€™s build
             <br />
             <em>better farming.</em>
           </h2>
@@ -757,8 +758,8 @@ export default function FarmerAI({ onBack }) {
         <a href="#farmer-top" className="farmer-footer-brand">
           <span>FARMER AI</span>
         </a>
-        <span>AI SPATIAL INTELLIGENCE · AGRICULTURE</span>
-        <a href="#farmer-top">BACK TO TOP ↑</a>
+        <span>AI SPATIAL INTELLIGENCE Â· AGRICULTURE</span>
+        <a href="#farmer-top">BACK TO TOP â†‘</a>
       </footer>
     </main>
   );
