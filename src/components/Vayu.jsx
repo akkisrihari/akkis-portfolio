@@ -1,4 +1,4 @@
-﻿import { asset } from "../utils/assets";
+import { asset } from "../utils/assets";
 import { useEffect, useRef, useState } from "react";
 import "./Vayu.css";
 import achievementPhoto1 from "../assets/vayuvega-achievement-1.png";
@@ -133,7 +133,7 @@ export default function Vayu({ onBack }) {
             type="button"
             onClick={onBack}
           >
-            â† BACK TO PROJECTS
+            ← BACK TO PROJECTS
           </button>
 
           <span className="vayu-eyebrow">
@@ -172,7 +172,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={openLiveDemo}
             >
-              GO LIVE <span>â†—</span>
+              GO LIVE <span>↗</span>
             </button>
 
             <button
@@ -180,7 +180,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={() => setShowWalkthroughs(true)}
             >
-              WATCH WALKTHROUGH <span>â–¶</span>
+              WATCH WALKTHROUGH <span>▶</span>
             </button>
 
             <button
@@ -188,7 +188,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={openGitHub}
             >
-              GITHUB <span>â†—</span>
+              GITHUB <span>↗</span>
             </button>
 
             <button
@@ -220,7 +220,7 @@ export default function Vayu({ onBack }) {
           <div>
             <span>CURRENT FOCUS</span>
             <strong>
-              Agriculture Â· Home Â· Construction
+              Agriculture · Home · Construction
             </strong>
           </div>
 
@@ -234,7 +234,7 @@ export default function Vayu({ onBack }) {
           <div>
             <span>ROLE</span>
             <strong>
-              Product Â· AI Â· Full Stack
+              Product · AI · Full Stack
             </strong>
           </div>
 
@@ -535,7 +535,7 @@ export default function Vayu({ onBack }) {
             </div>
 
             <i>
-              â†’
+              →
             </i>
 
             <div>
@@ -556,7 +556,7 @@ export default function Vayu({ onBack }) {
             </div>
 
             <i>
-              â†’
+              →
             </i>
 
             <div>
@@ -577,7 +577,7 @@ export default function Vayu({ onBack }) {
             </div>
 
             <i>
-              â†’
+              →
             </i>
 
             <div>
@@ -692,7 +692,7 @@ export default function Vayu({ onBack }) {
           <Progress
             name="Additional Domains"
             value="Planned"
-            percent="â€”"
+            percent="—"
           />
 
         </div>
@@ -765,7 +765,7 @@ export default function Vayu({ onBack }) {
             type="button"
             onClick={openGitHub}
           >
-            GITHUB â†—
+            GITHUB ↗
           </button>
 
         </div>
@@ -794,7 +794,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={openLiveDemo}
             >
-              GO LIVE <span>â†—</span>
+              GO LIVE <span>↗</span>
             </button>
 
             <button
@@ -802,7 +802,7 @@ export default function Vayu({ onBack }) {
               type="button"
               onClick={() => setShowWalkthroughs(true)}
             >
-              WATCH WALKTHROUGH <span>â–¶</span>
+              WATCH WALKTHROUGH <span>▶</span>
             </button>
 
           </div>
@@ -835,7 +835,7 @@ export default function Vayu({ onBack }) {
               aria-label="Close achievements"
               onClick={() => setShowAchievements(false)}
             >
-              Ã—
+              ×
             </button>
 
             <div className="vayu-achievement-celebration" aria-hidden="true">
@@ -858,7 +858,7 @@ export default function Vayu({ onBack }) {
                   }}
                 />
               ))}
-              <div className="vayu-achievement-spark">âœ¦</div>
+              <div className="vayu-achievement-spark">✦</div>
             </div>
 
             <span className="vayu-section-label">
@@ -952,7 +952,7 @@ export default function Vayu({ onBack }) {
                 setSelectedVideo(null);
               }}
             >
-              Ã—
+              ×
             </button>
 
             {!selectedVideo ? (
@@ -979,7 +979,7 @@ export default function Vayu({ onBack }) {
                       })
                     }
                   >
-                    <span>â–¶</span>
+                    <span>▶</span>
 
                     <div>
                       <strong>
@@ -987,17 +987,17 @@ export default function Vayu({ onBack }) {
                       </strong>
 
                       <small>
-                        3 MINUTES Â· QUICK PRODUCT DEMO
+                        3 MINUTES · QUICK PRODUCT DEMO
                       </small>
 
                       <p>
-                        A concise tour of Vayu â€” the core product,
+                        A concise tour of Vayu — the core product,
                         experience, and how the spatial intelligence
                         workflow comes together.
                       </p>
                     </div>
 
-                    <b>â†—</b>
+                    <b>↗</b>
                   </button>
 
                   <button
@@ -1010,7 +1010,7 @@ export default function Vayu({ onBack }) {
                       })
                     }
                   >
-                    <span>â–¶</span>
+                    <span>▶</span>
 
                     <div>
                       <strong>
@@ -1018,7 +1018,7 @@ export default function Vayu({ onBack }) {
                       </strong>
 
                       <small>
-                        13 MINUTES Â· COMPLETE PRODUCT DEMO
+                        13 MINUTES · COMPLETE PRODUCT DEMO
                       </small>
 
                       <p>
@@ -1028,7 +1028,7 @@ export default function Vayu({ onBack }) {
                       </p>
                     </div>
 
-                    <b>â†—</b>
+                    <b>↗</b>
                   </button>
 
                 </div>
@@ -1051,7 +1051,7 @@ export default function Vayu({ onBack }) {
                     type="button"
                     onClick={() => setSelectedVideo(null)}
                   >
-                    â† BACK
+                    ← BACK
                   </button>
 
                 </div>
@@ -1109,7 +1109,7 @@ function Progress({
           }`}
           style={{
             width:
-              percent === "â€”"
+              percent === "—"
                 ? "5%"
                 : percent,
           }}

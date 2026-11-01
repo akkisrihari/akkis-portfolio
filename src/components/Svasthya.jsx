@@ -1,4 +1,4 @@
-﻿import { asset } from "../utils/assets";
+import { asset } from "../utils/assets";
 import "./Svasthya.css";
 import { Lottie } from "lottie-react";
 
@@ -139,7 +139,7 @@ const healthDomains = [
   {
     title: "YOGA & EXERCISE",
     subtitle: "Personalized movement with specialized AI.",
-    assistant: "LEO Â· AIRA",
+    assistant: "LEO · AIRA",
   },
   {
     title: "DIET & NUTRITION",
@@ -227,7 +227,7 @@ function Svasthya({ onBack }) {
           className="sv-back"
           onClick={onBack}
         >
-          <span>â†</span>
+          <span>←</span>
           BACK TO PROJECTS
         </button>
 
@@ -251,7 +251,7 @@ function Svasthya({ onBack }) {
         <div className="sv-hero-copy">
 
           <span className="sv-eyebrow">
-            FLUTTER Â· AI Â· PRODUCT ENGINEERING
+            FLUTTER · AI · PRODUCT ENGINEERING
           </span>
 
           <h1>
@@ -279,7 +279,7 @@ function Svasthya({ onBack }) {
               className="sv-primary-button"
             >
               EXPLORE THE EXPERIENCE
-              <span>â†˜</span>
+              <span>↘</span>
             </a>
 
             <a
@@ -289,7 +289,7 @@ function Svasthya({ onBack }) {
               className="sv-secondary-button"
             >
               GITHUB
-              <span>â†—</span>
+              <span>↗</span>
             </a>
 
           </div>
@@ -301,7 +301,7 @@ function Svasthya({ onBack }) {
 
         </div>
 
-        {/* RIGHT SIDE â€” FLOATING SVASTHYA LOGO */}
+        {/* RIGHT SIDE — FLOATING SVASTHYA LOGO */}
 
         <div className="sv-hero-visual">
 
@@ -340,7 +340,7 @@ function Svasthya({ onBack }) {
             HEALTH
           </span>
 
-          <i>Ã—</i>
+          <i>×</i>
 
           <span>
             TRADITIONAL
@@ -376,7 +376,7 @@ function Svasthya({ onBack }) {
 
             <p>
               Svasthya brings together two major
-              domains â€” <strong>Health</strong> and
+              domains — <strong>Health</strong> and
               <strong> Traditional</strong>.
             </p>
 
@@ -395,7 +395,7 @@ function Svasthya({ onBack }) {
 
           <article className="sv-feature-card">
             <span>01</span>
-            <div className="sv-feature-icon">â—‰</div>
+            <div className="sv-feature-icon">◉</div>
             <h3>
               PERSONALIZED
               <br />
@@ -410,7 +410,7 @@ function Svasthya({ onBack }) {
 
           <article className="sv-feature-card">
             <span>02</span>
-            <div className="sv-feature-icon">âœ¦</div>
+            <div className="sv-feature-icon">✦</div>
             <h3>
               SPECIALIZED
               <br />
@@ -424,11 +424,11 @@ function Svasthya({ onBack }) {
 
           <article className="sv-feature-card">
             <span>03</span>
-            <div className="sv-feature-icon">â—ˆ</div>
+            <div className="sv-feature-icon">◈</div>
             <h3>
               HEALTH
               <br />
-              Ã— TRADITIONAL
+              × TRADITIONAL
             </h3>
             <p>
               Modern digital experiences
@@ -438,7 +438,7 @@ function Svasthya({ onBack }) {
 
           <article className="sv-feature-card">
             <span>04</span>
-            <div className="sv-feature-icon">â†—</div>
+            <div className="sv-feature-icon">↗</div>
             <h3>
               AUTOMATION
               <br />
@@ -517,7 +517,7 @@ function Svasthya({ onBack }) {
 
               {index !== 6 && (
                 <div className="sv-journey-arrow">
-                  â†’
+                  →
                 </div>
               )}
 
@@ -559,7 +559,7 @@ function Svasthya({ onBack }) {
 
               {index !== 6 && (
                 <div className="sv-journey-arrow">
-                  â†’
+                  →
                 </div>
               )}
 
@@ -651,7 +651,7 @@ function Svasthya({ onBack }) {
                   </div>
 
                   <span className="sv-domain-arrow">
-                    â†—
+                    ↗
                   </span>
 
                 </article>
@@ -688,7 +688,7 @@ function Svasthya({ onBack }) {
 
           <p>
             Svasthya's assistants are connected
-            to the domains they serve â€” making
+            to the domains they serve — making
             the interaction contextual to the
             user's activity.
           </p>
@@ -766,21 +766,21 @@ function Svasthya({ onBack }) {
             CONVERSATION
           </div>
 
-          <i>â†’</i>
+          <i>→</i>
 
           <div>
             <span>02</span>
             UNDERSTANDING
           </div>
 
-          <i>â†’</i>
+          <i>→</i>
 
           <div>
             <span>03</span>
             DOMAIN INTELLIGENCE
           </div>
 
-          <i>â†’</i>
+          <i>→</i>
 
           <div>
             <span>04</span>
@@ -821,7 +821,6 @@ function Svasthya({ onBack }) {
             </p>
 
             <div className="sv-traditional-mark">
-              <span>à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯</span>
               <small>
                 Being rooted in the self.
               </small>
@@ -980,14 +979,14 @@ function Svasthya({ onBack }) {
               rel="noreferrer"
             >
               VIEW ON GITHUB
-              <span>â†—</span>
+              <span>↗</span>
             </a>
 
             <button
               type="button"
               onClick={onBack}
             >
-              â† BACK TO PROJECTS
+              ← BACK TO PROJECTS
             </button>
 
           </div>
@@ -996,7 +995,7 @@ function Svasthya({ onBack }) {
 
         <div className="sv-footer-bottom">
           <span>
-            SVASTHYA Â· HEALTH Ã— TRADITIONAL
+            SVASTHYA · HEALTH × TRADITIONAL
           </span>
 
           <span>

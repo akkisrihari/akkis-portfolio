@@ -1,4 +1,4 @@
-﻿import { asset } from "../utils/assets";
+import { asset } from "../utils/assets";
 import { useEffect, useRef } from "react";
 import "./Projects.css";
 
@@ -305,7 +305,7 @@ function ProjectItem({
           </span>
 
           <span className="project-arrow">
-            â†—
+            ↗
           </span>
         </button>
       </div>
@@ -313,16 +313,16 @@ function ProjectItem({
       <div className="project-side-label">
         <span>
           {project.id === "vayu" &&
-            "UNDERSTAND Â· ANALYZE Â· REASON Â· PLAN Â· VISUALIZE"}
+            "UNDERSTAND · ANALYZE · REASON · PLAN · VISUALIZE"}
 
           {project.id === "svasthya" &&
-            "HEALTH Â· TRADITION Â· TECHNOLOGY Â· A BETTER YOU"}
+            "HEALTH · TRADITION · TECHNOLOGY · A BETTER YOU"}
 
           {project.id === "aj" &&
-            "ASK Â· LEARN Â· AUTOMATE Â· GET THINGS DONE"}
+            "ASK · LEARN · AUTOMATE · GET THINGS DONE"}
 
           {project.id === "farmer" &&
-            "LAND Â· SOIL Â· DATA Â· INTELLIGENCE"}
+            "LAND · SOIL · DATA · INTELLIGENCE"}
         </span>
       </div>
     </article>
@@ -351,7 +351,7 @@ export default function Projects({
 
         <div className="projects-title">
           <p>
-            THINGS Iâ€™VE BUILT.
+            THINGS I’VE BUILT.
           </p>
 
           <h1>
@@ -407,7 +407,7 @@ export default function Projects({
         </span>
 
         <i>
-          â†“
+          ↓
         </i>
 
       </footer>
