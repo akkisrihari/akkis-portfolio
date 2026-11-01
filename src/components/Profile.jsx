@@ -1,47 +1,47 @@
-﻿import { asset } from "../utils/assets";
+import { asset } from "../utils/assets";
 import "./Profile.css";
 
 const skills = [
   {
     name: "AI Engineering",
-    icon: "âœ¦",
+    icon: "✦",
     tone: "blue",
   },
   {
     name: "Generative AI & LLMs",
-    icon: "â—Ž",
+    icon: "◎",
     tone: "green",
   },
   {
     name: "Agentic AI & Automation",
-    icon: "â—‡",
+    icon: "◇",
     tone: "purple",
   },
   {
     name: "Product Engineering",
-    icon: "â¬¡",
+    icon: "⬡",
     tone: "orange",
   },
   {
     name: "Business Analysis",
-    icon: "â—«",
+    icon: "◫",
     tone: "gold",
   },
   {
     name: "Solutions Engineering",
-    icon: "âš™",
+    icon: "⚙",
     tone: "cyan",
   },
 ];
 
 const experience = [
   {
-    period: "SEP 2025 â€” JUN 2026",
+    period: "SEP 2025 — JUN 2026",
     company: "GOSURE.AI",
     role: "Trainee Solution Engineer / Product Engineer",
   },
   {
-    period: "APR 2025 â€” JUL 2025",
+    period: "APR 2025 — JUL 2025",
     company: "UNIFIED MENTOR",
     role: "Machine Learning Intern",
   },
@@ -59,7 +59,7 @@ export default function Profile() {
       <div className="profile-bg" />
 
       {/* =====================================================
-          LEFT â€” PHOTO
+          LEFT — PHOTO
           ===================================================== */}
 
       <div className="profile-visual">
@@ -86,7 +86,7 @@ export default function Profile() {
 
 
       {/* =====================================================
-          RIGHT â€” CONTENT
+          RIGHT — CONTENT
           ===================================================== */}
 
       <div className="profile-content">
@@ -101,7 +101,7 @@ export default function Profile() {
 
             <div className="profile-role">
               AI ENGINEER
-              <b>â€¢</b>
+              <b>•</b>
               PRODUCT BUILDER
             </div>
 
@@ -125,19 +125,19 @@ export default function Profile() {
             <div className="education">
 
               <div className="education-icon">
-                âŒ˜
+                ⌘
               </div>
 
               <div className="education-details">
 
                 <h3>
-                  B.Tech â€” Electronics &
+                  B.Tech — Electronics &
                   <br />
                   Communication Engineering
                 </h3>
 
                 <span>
-                  2021 â€” 2025
+                  2021 — 2025
                 </span>
 
                 <p>
@@ -169,12 +169,12 @@ export default function Profile() {
           <div className="about-content">
 
             <p className="about-lead">
-              Iâ€™m Akki Srihari â€” a Product Builder working at the
+              I’m Akki Srihari — a Product Builder working at the
               intersection of AI, technology, and real-world problems.
             </p>
 
             <p>
-              I donâ€™t just build software because I can.{" "}
+              I don’t just build software because I can.{" "}
               <strong>
                 I build because something can be better.
               </strong>
@@ -203,9 +203,9 @@ export default function Profile() {
             </p>
 
             <p className="about-final">
-              <strong>Iâ€™m not here just to write code.</strong>
+              <strong>I’m not here just to write code.</strong>
               <br />
-              <strong>Iâ€™m here to build whatâ€™s next.</strong>
+              <strong>I’m here to build what’s next.</strong>
             </p>
 
           </div>

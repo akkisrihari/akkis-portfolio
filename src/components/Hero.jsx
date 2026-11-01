@@ -1,4 +1,4 @@
-﻿import { asset } from "../utils/assets";
+import { asset } from "../utils/assets";
 import "./Hero.css";
 
 export default function Hero() {
@@ -27,7 +27,7 @@ export default function Hero() {
           <a href="#contact">CONTACT</a>
 
           <a className="hero-talk" href="#contact">
-            LET'S TALK â†—
+            LET'S TALK ↗
           </a>
         </nav>
       </header>
@@ -46,7 +46,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero-statement">
-            They don't just workâ€”
+            They don't just work—
             <br />
             they <em>change</em> how people work.
           </p>
@@ -59,11 +59,11 @@ export default function Hero() {
 
           <div className="hero-actions">
             <a className="hero-primary" href="#projects">
-              VIEW PROJECTS <span>â†’</span>
+              VIEW PROJECTS <span>→</span>
             </a>
 
             <a className="hero-secondary" href="#contact">
-              LET'S TALK <span>â†—</span>
+              LET'S TALK <span>↗</span>
             </a>
           </div>
 
@@ -93,17 +93,17 @@ export default function Hero() {
 
       <footer className="hero-footer">
         <div className="hero-location">
-          <span className="hero-location-icon">â—</span>
+          <span className="hero-location-icon">●</span>
 
           <div>
             <strong>HYDERABAD, INDIA</strong>
-            <span>17.3850Â° N / 78.4867Â° E</span>
+            <span>17.3850° N / 78.4867° E</span>
           </div>
         </div>
 
         <div className="hero-scroll">
           <span>SCROLL TO EXPLORE</span>
-          <span className="hero-scroll-icon">â†“</span>
+          <span className="hero-scroll-icon">↓</span>
         </div>
 
         <div className="hero-availability">
